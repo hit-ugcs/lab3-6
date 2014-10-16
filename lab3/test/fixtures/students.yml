@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  number: 1
+  name: MyString
+  nick_name: MyString
+  project: 1
+  final_test: 1
+  lab: 1
+  talking: 1
+  final: 1
+
+two:
+  number: 1
+  name: MyString
+  nick_name: MyString
+  project: 1
+  final_test: 1
+  lab: 1
+  talking: 1
+  final: 1

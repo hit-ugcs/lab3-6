@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student ID:</b>
+  <%= @student.number %>
+</p>
+
+<p>
+  <b>Name(Chinese):</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>Nick Name(English):</b>
+ <%= @student.nick_name %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @student.project %>
+</p>
+
+<p>
+  <b>Final Test:</b>
+  <%= @student.final_test %>
+</p>
+
+<p>
+  <b>Lab:</b>
+ <%= @student.lab %>
+</p>
+
+<p>
+  <b>Talking:</b>
+  <%= @student.talking %>
+</p>
+<p>
+  <b>Final:</b>
+ <%= @student.final %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
