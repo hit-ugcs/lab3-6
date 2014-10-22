@@ -1,0 +1,55 @@
+<script language="javascript">
+function printdiv(printpage)
+{
+    var headstr="<html><head><title></title></head></body>";
+    var footstr="</body>";
+    var newstr=document.all.item(printpage).innerHTML;
+    var oldstr=document.body.innerHTML;
+    document.body.innerHTML=headstr+newstr+footstr;
+    window.print();
+    document.body.innerHTML=oldstr;
+    return false;
+}
+</script>
+<title>div print</title>
+<h1>Grad WorkSheet</h1>
+<hr/>
+<div id="div_print">
+<table>
+<thead>
+  <tr>
+    <th>Student ID:</th>
+    <th>Name(chinese):</th>
+    <th>Nick Name(English):</th>
+    <th>Project:</th>
+    <th>Final Test:</th>
+    <th>Lab:</th>
+    <th>Talking:</th>
+    <th>Final:</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%= student.number %></td>
+    <td><%= student.name %></td>
+    <td><%= student.nick_name %></td>
+    <td><%= student.project %></td>
+    <td><%= student.final_test %></td>
+    <td><%= student.lab %></td>
+    <td><%= student.talking %></td>
+    <td><%= student.final %></td>
+    <td><%= link_to 'Show', student %></td>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />
+<%= link_to 'New Student', new_student_path %>
+<%= will_paginate @students %>
+<input name="b_print" type="button" class "ipt" onClick="printdiv('div_print');" value="print" style="float: right">

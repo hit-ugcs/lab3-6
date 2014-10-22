@@ -1,0 +1,3 @@
+class Student < ActiveRecord::Base
+  attr_accessible :final, :final_test, :lab, :name, :nick_name, :number, :project, :talking
+end
